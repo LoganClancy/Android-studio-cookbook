@@ -31,13 +31,16 @@ public class MainActivity extends AppCompatActivity {//main activity first scree
     }
 
     public void open2ndActivity(View v){//method thats ran when the button is pressed
-        Intent intent = new Intent(MainActivity.this, recipyIngredients.class);
-        startActivity(intent);
-        finish();
-
-
+        startRecipeIngredients();//starts the recipy ingrededients activity not passing any variables
     }
 
 
 
+    public void startRecipeIngredients(){
+        Intent intent = new Intent(MainActivity.this, recipyIngredients.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
+

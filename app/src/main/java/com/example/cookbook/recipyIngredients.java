@@ -24,10 +24,8 @@ public class recipyIngredients extends AppCompatActivity {
         setContentView(R.layout.recipe_ingredients);
 
 
-        nameText = findViewById(R.id.name);
+        ifTheyAlreadyHaveANameKeepIt();
 
-        name = getIntent().getStringExtra("name");
-        if(name != null) {nameText.setText(name);}
         Button procedure = findViewById(R.id.procedureButton);//procedure button
 
 
@@ -49,5 +47,13 @@ public class recipyIngredients extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void ifTheyAlreadyHaveANameKeepIt(){
+        nameText = findViewById(R.id.name);
+        name = getIntent().getStringExtra("name");
+
+        if(name != null) {nameText.setText(name);}
+    }
+
 
 }
